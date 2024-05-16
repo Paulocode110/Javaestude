@@ -1,30 +1,65 @@
-public class App {
-    public static void main(String[] args) throws Exception {
-        Relogio r1 = new Relogio();
+public class Relogio {
+    private int hora;
+    private int minuto;
+    private int segundo;
+
+    //vazio
+    public Relogio(){
+
+    }
 
 
 
-        r1.setHora(11);
-        r1.setMinuto(15);
-        r1.setSegundo(30);
+    // com atributos
+    public Relogio(int hora, int minuto, int segundo){
+        this.hora=hora;
+        this.minuto=minuto;
+        this.segundo=segundo;
+    }
 
-        System.out.println(r1.getHora()+":"+r1.getMinuto()+":"+r1.getSegundo());
+    //2ª versao com apenas hora e minuto
+    public Relogio(int hora, int minuto){
+        this.hora=hora;
+        this.minuto=minuto;
+        this.segundo=0;
+    }
+    //3ª versao com apenas hora e segundo
+    public Relogio(int hora){
+        this.hora=hora;
+        this.segundo=0;
+        this.minuto=0;
+    }
+
+    // public Relogio(int hora, int setSegundo){
+    //     this.hora=hora;
+    //     this.minuto=0;
+    //     this.segundo=segundo;
+    // }
 
 
 
-        Relogio r2 = new Relogio(11);
-        System.out.println(r2.getHora()+":"+r2.getMinuto()+":"+r2.getSegundo());
 
+    public int getHora() {
+        return hora;
+    }
 
-        Relogio r3 = new Relogio(11, 22);
-        System.out.println(r3.getHora()+":"+r3.getMinuto()+":"+r3.getSegundo());
+    public void setHora(int hora) {
+        this.hora = hora;
+    }
 
+    public int getMinuto() {
+        return minuto;
+    }
 
-        Relogio r4 = new Relogio(11, 23,30);
-        System.out.println(r4.getHora()+":"+r4.getMinuto()+":"+r4.getSegundo());
+    public void setMinuto(int minuto) {
+        this.minuto = minuto;
+    }
 
+    public int getSegundo() {
+        return segundo;
+    }
 
-        Relogio r5 = new Relogio();
-        System.out.println(r5.getHora()+":"+r5.getMinuto()+":"+r5.getSegundo());
+    public void setSegundo(int segundo) {
+        this.segundo = segundo;
     }
 }
